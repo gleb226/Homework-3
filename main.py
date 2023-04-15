@@ -10,12 +10,11 @@ class Student(Person):
 
 class Teacher(Person):
     def __init__(self, name):
-        super(). __init__(name)
+        super().__init__(name, 39)
 
-    def give_mark(self, student):
+    def give_mark(self, student, mark):
         print("Teacher gave grade to", student.name)
-        student.mark = 11("Hlieb")
-        student.mark = 6("Stas")
+        student.mark = mark
 
 me = Person("Hlieb", 13)
 
@@ -24,8 +23,8 @@ bad_student = Student("Stas")
 
 my_teacher = Teacher("Olga")
 
-my_teacher.give_mark(good_student)
-my_teacher.give_mark(bad_student)
+my_teacher.give_mark(good_student, 11)
+my_teacher.give_mark(bad_student, 6)
 
 print(good_student.mark)
 print(bad_student.mark)
